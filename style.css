@@ -1,0 +1,147 @@
+/* 鐵飯碗網站：跟 App 一樣的白底、2px 灰邊線、藍色重點 */
+:root {
+  --bg: #ffffff;
+  --card: #ffffff;
+  --soft: #f7f7f7;
+  --line: #e5e5e5;
+  --ink: #3c3c3c;
+  --muted: #777777;
+  --brand: #2f6bf2;
+  --brand-tint: #e3ecff;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #131f24;
+    --card: #131f24;
+    --soft: #202f36;
+    --line: #37464f;
+    --ink: #f1f7fb;
+    --muted: #9eb0ba;
+    --brand: #5b8dff;
+    --brand-tint: #1b2b4a;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+}
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+header.top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 8px;
+}
+header.top a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 20px;
+}
+.bowl {
+  font-size: 28px;
+  line-height: 1;
+}
+h1 {
+  font-size: 28px;
+  line-height: 1.3;
+  margin: 16px 0 4px;
+}
+h2 {
+  font-size: 20px;
+  line-height: 1.4;
+  margin: 32px 0 8px;
+}
+h3 {
+  font-size: 16px;
+  margin: 20px 0 4px;
+}
+p,
+li {
+  margin: 6px 0;
+}
+ul,
+ol {
+  padding-left: 1.4em;
+}
+a {
+  color: var(--brand);
+  font-weight: 700;
+}
+.updated {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0 0 16px;
+}
+.card {
+  border: 2px solid var(--line);
+  border-radius: 16px;
+  padding: 4px 16px;
+  margin: 12px 0;
+  background: var(--card);
+}
+.note {
+  background: var(--brand-tint);
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin: 12px 0;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 8px 0;
+  font-size: 15px;
+}
+th,
+td {
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 2px solid var(--line);
+  vertical-align: top;
+}
+th {
+  color: var(--muted);
+  font-weight: 700;
+}
+.links {
+  display: grid;
+  gap: 10px;
+  margin: 20px 0;
+}
+.links a {
+  display: block;
+  border: 2px solid var(--line);
+  border-bottom-width: 4px;
+  border-radius: 14px;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: var(--ink);
+}
+.links a span {
+  display: block;
+  color: var(--muted);
+  font-weight: 400;
+  font-size: 14px;
+}
+footer {
+  margin-top: 40px;
+  padding-top: 16px;
+  border-top: 2px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+}
